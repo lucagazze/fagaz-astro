@@ -7,6 +7,25 @@
 @import "@fontsource/inter/900.css";
 @import "@fontsource/material-symbols-outlined"; /* <--- AÑADE ESTO */
 
+
+/* --- AÑADE ESTO (Copia y Pega) --- */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined'; /* Importante: Nombre exacto de la fuente */
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
