@@ -40,30 +40,29 @@
                 </a>
             </div>
             <button id="mobile-menu-btn" class="md:hidden p-2 text-[#111118] hover:bg-gray-100 rounded-md transition-colors" aria-label="Abrir menú">
-                <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
-                <span id="close-icon" class="material-symbols-outlined text-3xl hidden">close</span>
+                <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-[60] bg-white transition-transform duration-300 ease-in-out pt-32">
-        <div class="px-4 pb-8 space-y-4 container mx-auto h-full overflow-y-auto">
-            <a href="/" class="block px-6 py-4 rounded-xl text-xl font-bold text-gray-900 hover:bg-gray-50 transition-all border border-gray-100 shadow-sm">Inicio</a>
-            <a href="/empresa" class="block px-6 py-4 rounded-xl text-xl font-bold text-gray-900 hover:bg-gray-50 transition-all border border-gray-100 shadow-sm">Empresa</a>
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-xl z-50">
+        <div class="flex flex-col p-4 space-y-2">
+            <a href="/" class="px-4 py-3 rounded-lg text-base font-bold text-gray-800 hover:bg-gray-50 hover:text-primary transition-colors">Inicio</a>
+            <a href="/empresa" class="px-4 py-3 rounded-lg text-base font-bold text-gray-800 hover:bg-gray-50 hover:text-primary transition-colors">Empresa</a>
             
-            <div class="space-y-2 pt-2">
-                <p class="px-6 text-xs font-black text-gray-400 uppercase tracking-widest">Servicios</p>
-                <a href="/servicios/limpieza" class="block px-6 py-3 rounded-xl text-lg font-medium text-gray-600 hover:bg-gray-50 hover:text-primary transition-all ml-4 border-l-4 border-transparent hover:border-primary">Limpieza Industrial</a>
-                <a href="/servicios/fumigacion" class="block px-6 py-3 rounded-xl text-lg font-medium text-gray-600 hover:bg-gray-50 hover:text-primary transition-all ml-4 border-l-4 border-transparent hover:border-primary">Fumigación</a>
-                <a href="/servicios/rrhh" class="block px-6 py-3 rounded-xl text-lg font-medium text-gray-600 hover:bg-gray-50 hover:text-primary transition-all ml-4 border-l-4 border-transparent hover:border-primary">Gestión de RRHH</a>
+            <div class="px-4 py-2">
+                <p class="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">Servicios</p>
+                <div class="flex flex-col space-y-1 ml-2 border-l-2 border-gray-100 pl-2">
+                    <a href="/servicios/limpieza" class="py-2 text-base font-medium text-gray-600 hover:text-primary transition-colors">Limpieza Industrial</a>
+                    <a href="/servicios/fumigacion" class="py-2 text-base font-medium text-gray-600 hover:text-primary transition-colors">Fumigación</a>
+                    <a href="/servicios/rrhh" class="py-2 text-base font-medium text-gray-600 hover:text-primary transition-colors">Gestión de RRHH</a>
+                </div>
             </div>
-            
-            <div class="pt-6 mt-6 border-t border-gray-100">
-                <a href="/contacto" class="flex items-center justify-center w-full rounded-xl bg-primary hover:bg-[#352e80] text-white px-6 py-5 text-lg font-bold transition-all shadow-lg hover:shadow-xl uppercase tracking-wide">
-                    Contacto
-                </a>
-            </div>
+
+            <a href="/contacto" class="mt-2 text-center w-full rounded-lg bg-primary hover:bg-[#352e80] text-white px-6 py-3 text-base font-bold transition-all shadow-md uppercase tracking-wide">
+                Contacto
+            </a>
         </div>
     </div>
 </header>
@@ -71,26 +70,31 @@
 <script>
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.getElementById('close-icon');
+    const icon = btn?.querySelector('.material-symbols-outlined');
 
-    if (btn && menu && menuIcon && closeIcon) {
+    if (btn && menu && icon) {
         btn.addEventListener('click', () => {
-            const isHidden = menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
             
-            if (isHidden) {
-                // Open menu
-                menu.classList.remove('hidden');
-                menuIcon.classList.add('hidden');
-                closeIcon.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            } else {
-                // Close menu
-                menu.classList.add('hidden');
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
+            // Toggle icon
+            if (menu.classList.contains('hidden')) {
+                icon.textContent = 'menu';
                 document.body.style.overflow = '';
+            } else {
+                icon.textContent = 'close';
+                // Optional: prevent scrolling when menu is open if desired, 
+                // but for a simple dropdown it might be better to allow scrolling or just keep it simple.
+                // document.body.style.overflow = 'hidden'; 
             }
+        });
+
+        // Close on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.textContent = 'menu';
+                document.body.style.overflow = '';
+            });
         });
     }
 </script>
