@@ -1,15 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 import Button from './UI/Button.astro';
+import limpiezaIndustrial from '../assets/images/Limpieza Industrial.jpg';
 ---
 
 <section class="relative w-full h-[650px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-black/60 z-10"></div>
-        <img 
+        <Image 
             alt="Large industrial piping system in a modern factory setting with blue lighting" 
             class="h-full w-full object-cover" 
-            src="/images/Limpieza Industrial.jpg"
+            src={limpiezaIndustrial}
             loading="eager"
+            format="webp"
+            quality={"mid"}
         />
     </div>
     <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">

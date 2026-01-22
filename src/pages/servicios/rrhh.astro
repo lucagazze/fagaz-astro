@@ -1,6 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/UI/Button.astro';
+import { Image } from 'astro:assets';
+import rrhh from '../../assets/images/Gestion de recursos hhumanos.jpg';
+import limpieza10 from '../../assets/images/limpieza10.jpg';
+import limpieza1 from '../../assets/images/limpieza1.jpg';
+import operariosIndustriales from '../../assets/images/operarios_industriales.png';
+import paradaDePlanta from '../../assets/images/parada_de_planta.png';
 ---
 
 <Layout title="Fagaz SA - Gestión de Recursos Humanos" description="Selección, reclutamiento y administración de talento especializado para la industria.">
@@ -8,7 +14,7 @@ import Button from '../../components/UI/Button.astro';
     <section class="relative w-full h-[300px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-black/60 z-10"></div>
-            <img alt="Workers in industrial gear having a meeting on site" class="h-full w-full object-cover" src="/images/Gestion de recursos hhumanos.jpg"/>
+            <Image alt="Workers in industrial gear having a meeting on site" class="h-full w-full object-cover" src={rrhh}/>
         </div>
         <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
             <div class="max-w-3xl">
@@ -47,7 +53,7 @@ import Button from '../../components/UI/Button.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Mantenimiento Industrial" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/limpieza10.jpg"/>
+                                <Image alt="Mantenimiento Industrial" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={limpieza10}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-black mb-2">Mantenimiento</h4>
@@ -57,7 +63,7 @@ import Button from '../../components/UI/Button.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Limpieza Industrial" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/limpieza1.jpg"/>
+                                <Image alt="Limpieza Industrial" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={limpieza1}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-black mb-2">Limpieza</h4>
@@ -67,7 +73,7 @@ import Button from '../../components/UI/Button.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Operadores de Planta" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/operarios_industriales.png"/>
+                                <Image alt="Operadores de Planta" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={operariosIndustriales}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-black mb-2">Operadores</h4>
@@ -77,7 +83,7 @@ import Button from '../../components/UI/Button.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Paradas de Planta" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/parada_de_planta.png"/>
+                                <Image alt="Paradas de Planta" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={paradaDePlanta}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-black mb-2">Paradas de Planta</h4>

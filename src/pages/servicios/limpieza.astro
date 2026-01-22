@@ -1,5 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import limpieza25 from '../../assets/images/limpieza25.jpg';
+import limpiezaOficinas from '../../assets/images/limpieza_oficinas.png';
+import comedorIndustrial from '../../assets/images/comedor_industrial.png';
+import limpieza2 from '../../assets/images/limpieza2.jpg';
+import limpiezaIndustrial from '../../assets/images/Limpieza Industrial 1.jpg';
+import siloCleaning from '../../assets/images/silo_cleaning.png';
+import ventilationSystems from '../../assets/images/ventilation_systems.png';
+import limpieza23 from '../../assets/images/limpieza23.jpg';
 ---
 
 <Layout title="Limpieza Industrial y de Silos | Fagaz SA" description="Servicios profesionales de limpieza industrial: silos, celdas, espacios confinados, oficinas y comedores. Tecnología avanzada y personal capacitado.">
@@ -7,7 +16,7 @@ import Layout from '../../layouts/Layout.astro';
     <section class="relative w-full h-[300px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-black/60 z-10"></div>
-            <img alt="Large industrial piping system in a modern factory setting with blue lighting" class="h-full w-full object-cover" src="/images/limpieza25.jpg"/>
+            <Image alt="Large industrial piping system in a modern factory setting with blue lighting" class="h-full w-full object-cover" src={limpieza25}/>
         </div>
         <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
             <div class="max-w-3xl">
@@ -45,7 +54,7 @@ import Layout from '../../layouts/Layout.astro';
                             <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                                 <div class="h-64 overflow-hidden relative">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                    <img alt="Limpieza de Oficinas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/limpieza_oficinas.png"/>
+                                    <Image alt="Limpieza de Oficinas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={limpiezaOficinas}/>
                                 </div>
                                 <div class="p-6">
                                     <h4 class="text-xl font-bold text-[#111118] mb-2">Oficinas</h4>
@@ -55,7 +64,7 @@ import Layout from '../../layouts/Layout.astro';
                             <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                                 <div class="h-64 overflow-hidden relative">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                    <img alt="Limpieza de Comedores" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/comedor_industrial.png"/>
+                                    <Image alt="Limpieza de Comedores" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={comedorIndustrial}/>
                                 </div>
                                 <div class="p-6">
                                     <h4 class="text-xl font-bold text-[#111118] mb-2">Comedores</h4>
@@ -65,7 +74,7 @@ import Layout from '../../layouts/Layout.astro';
                             <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                                 <div class="h-64 overflow-hidden relative">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                    <img alt="Espacios Comunes" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/limpieza2.jpg"/>
+                                    <Image alt="Espacios Comunes" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={limpieza2}/>
                                 </div>
                                 <div class="p-6">
                                     <h4 class="text-xl font-bold text-[#111118] mb-2">Espacios Comunes</h4>
@@ -85,7 +94,7 @@ import Layout from '../../layouts/Layout.astro';
                             <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                                 <div class="h-64 overflow-hidden relative">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                    <img alt="Limpieza de Silos" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/Limpieza Industrial 1.jpg"/>
+                                    <Image alt="Limpieza de Silos" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={limpiezaIndustrial}/>
                                 </div>
                                 <div class="p-6">
                                     <h4 class="text-xl font-bold text-[#111118] mb-2">Limpieza de Silos</h4>
@@ -95,7 +104,7 @@ import Layout from '../../layouts/Layout.astro';
                             <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                                 <div class="h-64 overflow-hidden relative">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                    <img alt="Limpieza de Celdas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/silo_cleaning.png"/>
+                                    <Image alt="Limpieza de Celdas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={siloCleaning}/>
                                 </div>
                                 <div class="p-6">
                                     <h4 class="text-xl font-bold text-[#111118] mb-2">Limpieza de Celdas</h4>
@@ -105,7 +114,7 @@ import Layout from '../../layouts/Layout.astro';
                             <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                                 <div class="h-64 overflow-hidden relative">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                    <img alt="Sistemas de Ventilación" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/ventilation_systems.png"/>
+                                    <Image alt="Sistemas de Ventilación" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={ventilationSystems}/>
                                 </div>
                                 <div class="p-6">
                                     <h4 class="text-xl font-bold text-[#111118] mb-2">Sistemas de Ventilación</h4>
@@ -115,7 +124,7 @@ import Layout from '../../layouts/Layout.astro';
                             <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                                 <div class="h-64 overflow-hidden relative">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                    <img alt="Equipos Especiales" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/limpieza23.jpg"/>
+                                    <Image alt="Equipos Especiales" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={limpieza23}/>
                                 </div>
                                 <div class="p-6">
                                     <h4 class="text-xl font-bold text-[#111118] mb-2">Equipos Especiales</h4>

@@ -1,13 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/UI/Button.astro';
+import { Image } from 'astro:assets';
+import limpieza6 from '../assets/images/limpieza6.jpg';
 ---
 
 <Layout title="Fagaz SA - Contacto y Ubicación" description="Póngase en contacto con Fagaz SA. Estamos listos para atender sus necesidades industriales.">
     <!-- Hero -->
     <section class="relative w-full h-[250px] flex items-center justify-center overflow-hidden bg-black">
         <div class="absolute inset-0 z-0 opacity-60">
-            <img alt="Industrial background texture" class="h-full w-full object-cover" src="/images/limpieza6.jpg"/>
+            <Image alt="Industrial background texture" class="h-full w-full object-cover" src={limpieza6}/>
         </div>
         <div class="relative z-10 container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-black text-white mb-2">Contacto</h1>

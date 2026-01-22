@@ -1,5 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import fumigacion from '../../assets/images/Fumigacion.jpg';
+import fumigacion1 from '../../assets/images/fumigacion1.jpg';
+import fumigacion9 from '../../assets/images/fumigacion9.jpg';
+import fumigacionBuque from '../../assets/images/FUMIGACION BUQUE.jpg';
+import fumigacion4 from '../../assets/images/fumigacion4.jpg';
+import fumigacion6 from '../../assets/images/fumigacion6.jpg';
+import sanitizationService from '../../assets/images/sanitization_service.png';
 ---
 
 <Layout title="Fumigación y Control de Plagas | Fagaz SA" description="Control integral de plagas, fumigación de granos, buques y sanitización de espacios. Certificaciones y protocolos de seguridad ambiental.">
@@ -7,7 +15,7 @@ import Layout from '../../layouts/Layout.astro';
     <section class="relative w-full h-[300px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-black/60 z-10"></div>
-            <img alt="Industrial protective gear and fumigation equipment close-up" class="h-full w-full object-cover" src="/images/Fumigacion.jpg"/>
+            <Image alt="Industrial protective gear and fumigation equipment close-up" class="h-full w-full object-cover" src={fumigacion}/>
         </div>
         <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
             <div class="max-w-3xl">
@@ -37,7 +45,7 @@ import Layout from '../../layouts/Layout.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Fumigación de Granos" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/fumigacion1.jpg"/>
+                                <Image alt="Fumigación de Granos" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={fumigacion1}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-[#111118] mb-2">Fumigación de Granos</h4>
@@ -49,7 +57,7 @@ import Layout from '../../layouts/Layout.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Tratamientos" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/fumigacion9.jpg"/>
+                                <Image alt="Tratamientos" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={fumigacion9}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-[#111118] mb-2">Tratamientos</h4>
@@ -61,7 +69,7 @@ import Layout from '../../layouts/Layout.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Fumigación en Tránsito" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/FUMIGACION BUQUE.jpg"/>
+                                <Image alt="Fumigación en Tránsito" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={fumigacionBuque}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-[#111118] mb-2">Fumigación en Tránsito</h4>
@@ -73,7 +81,7 @@ import Layout from '../../layouts/Layout.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Contenedores y Silos" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/fumigacion4.jpg"/>
+                                <Image alt="Contenedores y Silos" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={fumigacion4}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-[#111118] mb-2">Contenedores y Silos</h4>
@@ -85,7 +93,7 @@ import Layout from '../../layouts/Layout.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Control de Plagas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/fumigacion6.jpg"/>
+                                <Image alt="Control de Plagas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={fumigacion6}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-[#111118] mb-2">Control de Plagas</h4>
@@ -97,7 +105,7 @@ import Layout from '../../layouts/Layout.astro';
                         <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                             <div class="h-64 overflow-hidden relative">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                                <img alt="Sanitización" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="/images/sanitization_service.png"/>
+                                <Image alt="Sanitización" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src={sanitizationService}/>
                             </div>
                             <div class="p-6">
                                 <h4 class="text-xl font-bold text-[#111118] mb-2">Sanitización</h4>
