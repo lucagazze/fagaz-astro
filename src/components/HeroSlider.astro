@@ -12,22 +12,22 @@ import Button from './UI/Button.astro';
             <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
                 <div class="max-w-3xl animate-fade-in-up">
                     <h1 class="text-3xl md:text-6xl font-black text-white mb-4 md:mb-6 leading-tight uppercase tracking-tight">
-                        Limpieza <span class="text-blue-400">Industrial</span>
+                        Limpieza <span class="text-primary-light">Industrial</span>
                     </h1>
                     <p class="text-base md:text-xl text-white mb-6 md:mb-8 max-w-2xl leading-relaxed font-medium drop-shadow-md">
                         Servicios de higiene técnica para plantas, silos y espacios confinados. Mantenimiento institucional de oficinas y comedores.
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10 text-white font-medium text-sm md:text-base">
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-blue-400">check_circle</span>
+                            <span class="material-symbols-outlined text-primary-light">check_circle</span>
                             <span>Limpieza de Silos y Celdas</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-blue-400">check_circle</span>
+                            <span class="material-symbols-outlined text-primary-light">check_circle</span>
                             <span>Mantenimiento de Oficinas</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-blue-400">check_circle</span>
+                            <span class="material-symbols-outlined text-primary-light">check_circle</span>
                             <span>Equipos de Aspiración</span>
                         </div>
                     </div>
@@ -50,22 +50,22 @@ import Button from './UI/Button.astro';
             <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
                 <div class="max-w-3xl">
                     <h1 class="text-3xl md:text-6xl font-black text-white mb-4 md:mb-6 leading-tight uppercase tracking-tight">
-                        Fumigación y <span class="text-green-400">Sanitización</span>
+                        Fumigación y <span class="text-primary-light">Sanitización</span>
                     </h1>
                     <p class="text-base md:text-xl text-white mb-6 md:mb-8 max-w-2xl leading-relaxed font-medium drop-shadow-md">
                         Control integral de plagas y sanitización. Tratamientos preventivos y curativos para granos, buques y plantas industriales.
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10 text-white font-medium text-sm md:text-base">
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-green-400">check_circle</span>
+                            <span class="material-symbols-outlined text-primary-light">check_circle</span>
                             <span>Fumigación de Granos</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-green-400">check_circle</span>
+                            <span class="material-symbols-outlined text-primary-light">check_circle</span>
                             <span>Control en Buques</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-green-400">check_circle</span>
+                            <span class="material-symbols-outlined text-primary-light">check_circle</span>
                             <span>Sanitización de Espacios</span>
                         </div>
                     </div>
@@ -88,22 +88,22 @@ import Button from './UI/Button.astro';
             <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
                 <div class="max-w-3xl">
                     <h1 class="text-3xl md:text-6xl font-black text-white mb-4 md:mb-6 leading-tight uppercase tracking-tight">
-                        Gestión de <span class="text-purple-400">RRHH</span>
+                        Gestión de <span class="text-primary-light">RRHH</span>
                     </h1>
                     <p class="text-base md:text-xl text-white mb-6 md:mb-8 max-w-2xl leading-relaxed font-medium drop-shadow-md">
                         Soluciones de personal especializado. Búsqueda, selección y administración de talento para operaciones industriales.
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10 text-white font-medium text-sm md:text-base">
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-purple-400">check_circle</span>
+                            <span class="material-symbols-outlined text-primary-light">check_circle</span>
                             <span>Personal de Mantenimiento</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-purple-400">check_circle</span>
+                            <span class="material-symbols-outlined text-primary-light">check_circle</span>
                             <span>Operarios de Planta</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-purple-400">check_circle</span>
+                            <span class="material-symbols-outlined text-primary-light">check_circle</span>
                             <span>Paradas de Planta</span>
                         </div>
                     </div>
@@ -197,4 +197,23 @@ import Button from './UI/Button.astro';
     }
 
     if (slides.length > 0) {
-        nextBtn?.a
+        nextBtn?.addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+
+        prevBtn?.addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                resetAutoSlide();
+            });
+        });
+
+        startAutoSlide();
+    }
+</script>
