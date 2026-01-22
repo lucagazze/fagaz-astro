@@ -116,51 +116,53 @@ import limpieza6 from '../assets/images/limpieza6.jpg';
                     </form>
 
                     <script>
-                        const form = document.getElementById('contact-form');
+                        const form = document.getElementById('contact-form') as HTMLFormElement;
                         const result = document.getElementById('form-result');
 
-                        form.addEventListener('submit', function(e) {
-                            e.preventDefault();
-                            const formData = new FormData(form);
-                            const object = Object.fromEntries(formData);
-                            const json = JSON.stringify(object);
-                            
-                            result.innerHTML = "Enviando...";
-                            result.classList.remove('hidden', 'text-green-600', 'text-red-600');
-                            result.classList.add('text-gray-600');
+                        if (form && result) {
+                            form.addEventListener('submit', function(e) {
+                                e.preventDefault();
+                                const formData = new FormData(form);
+                                const object = Object.fromEntries(formData);
+                                const json = JSON.stringify(object);
+                                
+                                result.innerHTML = "Enviando...";
+                                result.classList.remove('hidden', 'text-green-600', 'text-red-600');
+                                result.classList.add('text-gray-600');
 
-                            fetch('/api/send-mail', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'Accept': 'application/json'
-                                },
-                                body: json
-                            })
-                            .then(async (response) => {
-                                let json = await response.json();
-                                if (response.status == 200) {
-                                    window.location.href = "/gracias";
-                                } else {
-                                    console.log(response);
-                                    result.innerHTML = json.message;
+                                fetch('/api/send-mail', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                        'Accept': 'application/json'
+                                    },
+                                    body: json
+                                })
+                                .then(async (response) => {
+                                    let json = await response.json();
+                                    if (response.status == 200) {
+                                        window.location.href = "/gracias";
+                                    } else {
+                                        console.log(response);
+                                        result.innerHTML = json.message;
+                                        result.classList.remove('text-gray-600');
+                                        result.classList.add('text-red-600');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.log(error);
+                                    result.innerHTML = "Ocurrió un error. Por favor intente nuevamente.";
                                     result.classList.remove('text-gray-600');
                                     result.classList.add('text-red-600');
-                                }
-                            })
-                            .catch(error => {
-                                console.log(error);
-                                result.innerHTML = "Ocurrió un error. Por favor intente nuevamente.";
-                                result.classList.remove('text-gray-600');
-                                result.classList.add('text-red-600');
-                            })
-                            .then(function() {
-                                form.reset();
-                                setTimeout(() => {
-                                    result.style.display = "none";
-                                }, 5000);
+                                })
+                                .then(function() {
+                                    form.reset();
+                                    setTimeout(() => {
+                                        result.style.display = "none";
+                                    }, 5000);
+                                });
                             });
-                        });
+                        }
                     </script>
                 </div>
             </div>
