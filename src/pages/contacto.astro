@@ -68,8 +68,11 @@ import limpieza6 from '../assets/images/limpieza6.jpg';
                 <div class="bg-background-light rounded-2xl p-8 lg:p-10 shadow-lg border border-gray-100 flex flex-col justify-center order-1 lg:order-2">
                     <h3 class="text-2xl font-bold text-[#111118] mb-2">¿Listo para optimizar sus operaciones?</h3>
                     <p class="text-[#625e87] mb-8">Complete el formulario y nos pondremos en contacto a la brevedad.</p>
-                    <form id="contact-form" class="space-y-5">
-                        <!-- Hidden inputs removed for SMTP -->
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+                        <input type="hidden" name="access_key" value="392a0797-bcaa-4eb1-8b30-1b03db06d3ec">
+                        <input type="hidden" name="subject" value="Nuevo mensaje desde Contacto - Fagaz Web">
+                        <input type="hidden" name="from_name" value="Fagaz Web">
+                        <input type="hidden" name="redirect" value="https://fagazsa.com/gracias">
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
@@ -112,58 +115,7 @@ import limpieza6 from '../assets/images/limpieza6.jpg';
                         <p class="text-xs text-center text-gray-400 mt-4">
                             Al enviar este formulario, acepta nuestra política de privacidad y términos de servicio.
                         </p>
-                        <div id="form-result" class="text-center text-sm font-bold mt-4 hidden"></div>
                     </form>
-
-                    <script>
-                        const form = document.getElementById('contact-form') as HTMLFormElement;
-                        const result = document.getElementById('form-result');
-
-                        if (form && result) {
-                            form.addEventListener('submit', function(e) {
-                                e.preventDefault();
-                                const formData = new FormData(form);
-                                const object = Object.fromEntries(formData);
-                                const json = JSON.stringify(object);
-                                
-                                result.innerHTML = "Enviando...";
-                                result.classList.remove('hidden', 'text-green-600', 'text-red-600');
-                                result.classList.add('text-gray-600');
-
-                                fetch('/api/send-mail', {
-                                    method: 'POST',
-                                    headers: {
-                                        'Content-Type': 'application/json',
-                                        'Accept': 'application/json'
-                                    },
-                                    body: json
-                                })
-                                .then(async (response) => {
-                                    let json = await response.json();
-                                    if (response.status == 200) {
-                                        window.location.href = "/gracias";
-                                    } else {
-                                        console.log(response);
-                                        result.innerHTML = json.message;
-                                        result.classList.remove('text-gray-600');
-                                        result.classList.add('text-red-600');
-                                    }
-                                })
-                                .catch(error => {
-                                    console.log(error);
-                                    result.innerHTML = "Ocurrió un error. Por favor intente nuevamente.";
-                                    result.classList.remove('text-gray-600');
-                                    result.classList.add('text-red-600');
-                                })
-                                .then(function() {
-                                    form.reset();
-                                    setTimeout(() => {
-                                        result.style.display = "none";
-                                    }, 5000);
-                                });
-                            });
-                        }
-                    </script>
                 </div>
             </div>
         </div>
