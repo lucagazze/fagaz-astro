@@ -66,11 +66,8 @@ import Button from '../components/UI/Button.astro';
                 <div class="bg-background-light rounded-2xl p-8 lg:p-10 shadow-lg border border-gray-100 flex flex-col justify-center order-1 lg:order-2">
                     <h3 class="text-2xl font-bold text-[#111118] mb-2">¿Listo para optimizar sus operaciones?</h3>
                     <p class="text-[#625e87] mb-8">Complete el formulario y nos pondremos en contacto a la brevedad.</p>
-                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-5">
-                        <input type="hidden" name="access_key" value="392a0797-bcaa-4eb1-8b30-1b03db06d3ec">
-                        <!-- Optional: Custom Redirect or Success Message handling via JS -->
-                        <input type="hidden" name="subject" value="Nuevo mensaje de contacto - Fagaz Web">
-                        <input type="hidden" name="from_name" value="Fagaz Web">
+                    <form id="contact-form" class="space-y-5">
+                        <!-- Hidden inputs removed for SMTP -->
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
@@ -130,7 +127,7 @@ import Button from '../components/UI/Button.astro';
                             result.classList.remove('hidden', 'text-green-600', 'text-red-600');
                             result.classList.add('text-gray-600');
 
-                            fetch('https://api.web3forms.com/submit', {
+                            fetch('/api/send-mail', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
