@@ -138,10 +138,7 @@ import Button from '../components/UI/Button.astro';
                             .then(async (response) => {
                                 let json = await response.json();
                                 if (response.status == 200) {
-                                    result.innerHTML = "¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.";
-                                    result.classList.remove('text-gray-600');
-                                    result.classList.add('text-green-600');
-                                    form.reset();
+                                    window.location.href = "/gracias";
                                 } else {
                                     console.log(response);
                                     result.innerHTML = json.message;
