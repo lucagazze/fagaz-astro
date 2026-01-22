@@ -1,0 +1,56 @@
+/* Font Inter */
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/inter/900.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.section-pattern {
+    background-image: radial-gradient(#433ba0 0.5px, transparent 0.5px), radial-gradient(#433ba0 0.5px, #f9f9fb 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.05;
+}
+
+.hero-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #c7c7c7;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Selection Color */
+::selection {
+    background: #433ba0;
+    color: white;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fade-in 0.2s ease-out forwards;
+}

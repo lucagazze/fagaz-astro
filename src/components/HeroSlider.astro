@@ -1,0 +1,200 @@
+---
+import Button from './UI/Button.astro';
+---
+
+<section class="relative w-full h-[600px] md:h-[700px] overflow-hidden bg-black group">
+    <!-- Slides Container -->
+    <div id="hero-slider" class="relative w-full h-full">
+        <!-- Slide 1: Limpieza -->
+        <div class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-100 z-10 slide active" data-index="0">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <img src="/images/Limpieza Industrial 1.jpg" alt="Limpieza Industrial" class="absolute inset-0 w-full h-full object-cover animate-kenburns"/>
+            <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
+                <div class="max-w-3xl animate-fade-in-up">
+                    <h1 class="text-3xl md:text-6xl font-black text-white mb-4 md:mb-6 leading-tight uppercase tracking-tight">
+                        Limpieza <span class="text-blue-400">Industrial</span>
+                    </h1>
+                    <p class="text-base md:text-xl text-white mb-6 md:mb-8 max-w-2xl leading-relaxed font-medium drop-shadow-md">
+                        Servicios de higiene técnica para plantas, silos y espacios confinados. Mantenimiento institucional de oficinas y comedores.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10 text-white font-medium text-sm md:text-base">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-blue-400">check_circle</span>
+                            <span>Limpieza de Silos y Celdas</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-blue-400">check_circle</span>
+                            <span>Mantenimiento de Oficinas</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-blue-400">check_circle</span>
+                            <span>Equipos de Aspiración</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <Button href="/servicios/limpieza" variant="primary" class="w-full sm:w-auto px-8 py-3 md:py-4 text-base md:text-lg shadow-xl hover:scale-105 transition-transform text-center">
+                            Ver Detalles
+                        </Button>
+                        <a href="/contacto" class="w-full sm:w-auto px-8 py-3 md:py-4 text-base md:text-lg font-bold text-white border-2 border-white rounded-lg hover:bg-white hover:text-black transition-all shadow-lg hover:shadow-xl text-center">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Fumigación -->
+        <div class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 z-0 slide" data-index="1">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <img src="/images/Fumigacion.jpg" alt="Fumigación" class="absolute inset-0 w-full h-full object-cover animate-kenburns"/>
+            <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-3xl md:text-6xl font-black text-white mb-4 md:mb-6 leading-tight uppercase tracking-tight">
+                        Fumigación y <span class="text-green-400">Sanitización</span>
+                    </h1>
+                    <p class="text-base md:text-xl text-white mb-6 md:mb-8 max-w-2xl leading-relaxed font-medium drop-shadow-md">
+                        Control integral de plagas y sanitización. Tratamientos preventivos y curativos para granos, buques y plantas industriales.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10 text-white font-medium text-sm md:text-base">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-green-400">check_circle</span>
+                            <span>Fumigación de Granos</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-green-400">check_circle</span>
+                            <span>Control en Buques</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-green-400">check_circle</span>
+                            <span>Sanitización de Espacios</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <Button href="/servicios/fumigacion" variant="primary" class="w-full sm:w-auto px-8 py-3 md:py-4 text-base md:text-lg shadow-xl hover:scale-105 transition-transform text-center">
+                            Ver Detalles
+                        </Button>
+                        <a href="/contacto" class="w-full sm:w-auto px-8 py-3 md:py-4 text-base md:text-lg font-bold text-white border-2 border-white rounded-lg hover:bg-white hover:text-black transition-all shadow-lg hover:shadow-xl text-center">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: RRHH -->
+        <div class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 z-0 slide" data-index="2">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <img src="/images/Gestion de recursos hhumanos.jpg" alt="Recursos Humanos" class="absolute inset-0 w-full h-full object-cover animate-kenburns"/>
+            <div class="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-3xl md:text-6xl font-black text-white mb-4 md:mb-6 leading-tight uppercase tracking-tight">
+                        Gestión de <span class="text-purple-400">RRHH</span>
+                    </h1>
+                    <p class="text-base md:text-xl text-white mb-6 md:mb-8 max-w-2xl leading-relaxed font-medium drop-shadow-md">
+                        Soluciones de personal especializado. Búsqueda, selección y administración de talento para operaciones industriales.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10 text-white font-medium text-sm md:text-base">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-purple-400">check_circle</span>
+                            <span>Personal de Mantenimiento</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-purple-400">check_circle</span>
+                            <span>Operarios de Planta</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-purple-400">check_circle</span>
+                            <span>Paradas de Planta</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <Button href="/servicios/rrhh" variant="primary" class="w-full sm:w-auto px-8 py-3 md:py-4 text-base md:text-lg shadow-xl hover:scale-105 transition-transform text-center">
+                            Ver Detalles
+                        </Button>
+                        <a href="/contacto" class="w-full sm:w-auto px-8 py-3 md:py-4 text-base md:text-lg font-bold text-white border-2 border-white rounded-lg hover:bg-white hover:text-black transition-all shadow-lg hover:shadow-xl text-center">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="absolute bottom-8 left-0 right-0 z-30 flex justify-center gap-3">
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors slider-dot active" data-index="0" aria-label="Slide 1"></button>
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors slider-dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors slider-dot" data-index="2" aria-label="Slide 3"></button>
+    </div>
+
+    <button id="prev-slide" class="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 text-white hover:bg-black/40 transition-colors hidden md:block">
+        <span class="material-symbols-outlined text-4xl">chevron_left</span>
+    </button>
+    <button id="next-slide" class="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 text-white hover:bg-black/40 transition-colors hidden md:block">
+        <span class="material-symbols-outlined text-4xl">chevron_right</span>
+    </button>
+</section>
+
+<style>
+    .animate-kenburns {
+        animation: kenburns 20s ease-out infinite alternate;
+    }
+    @keyframes kenburns {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.1); }
+    }
+    .slide.active {
+        opacity: 1;
+        z-index: 10;
+    }
+    .slider-dot.active {
+        background-color: white;
+        transform: scale(1.2);
+    }
+</style>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevBtn = document.getElementById('prev-slide');
+    const nextBtn = document.getElementById('next-slide');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let slideInterval: any;
+
+    function showSlide(index: number) {
+        slides.forEach(slide => {
+            (slide as HTMLElement).classList.remove('active');
+            (slide as HTMLElement).style.opacity = '0';
+            (slide as HTMLElement).style.zIndex = '0';
+        });
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        (slides[index] as HTMLElement).classList.add('active');
+        (slides[index] as HTMLElement).style.opacity = '1';
+        (slides[index] as HTMLElement).style.zIndex = '10';
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        let next = (currentSlide + 1) % totalSlides;
+        showSlide(next);
+    }
+
+    function prevSlide() {
+        let prev = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(prev);
+    }
+
+    function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(slideInterval);
+        startAutoSlide();
+    }
+
+    if (slides.length > 0) {
+        nextBtn?.a

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fagazsa.com/sitemap-index.xml

@@ -1,0 +1,27 @@
+{
+  "name": "fagaz-web-2.0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@fontsource/inter": "^5.2.8",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "astro": "^5.16.13",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.3"
+  }
+}
